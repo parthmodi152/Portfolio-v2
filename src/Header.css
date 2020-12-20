@@ -1,0 +1,177 @@
+.Header {
+    background-image: url(./assets/background1.webp);
+    background-position: 50%;
+    height: 100vh;
+    padding-top: 150px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header__content {
+    width: 80vw;
+    height: 100%;
+    border-left: solid 0.3px #5918DF;
+    padding-left: 30px;
+    position: relative;
+}
+.Header__content > .sidebar__circle {
+    border: solid 3px #5918DF;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: transparent;
+    position: absolute;
+    left: -6.2px;
+    top: -12px;
+}
+
+
+.first > p {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    color: #988e9f;
+    margin-bottom: 40px;
+}
+
+.second > p {
+    display: inline-block;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+    margin: 22px 0;
+}
+
+.third > p {
+    display: inline-block;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+    margin: 12px 0;
+}
+
+.fourth > p {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 400;
+    color: #988e9f;
+    margin-top: 50px;
+}
+
+.Header__content > .second > p > span {
+    color: #5918DF;
+}
+
+.Header__content > .third > p > i {
+    font-family: 'Palatino',Georgia,Times New Roman,Times,serif;
+}
+
+.Header__content > .third > p > .mono {
+    font-family: 'Roboto Mono',Courier New,Courier,monospace!important;
+}
+
+
+.first > .reveal::after {
+    background-color: white;
+}
+.second > .reveal::after {
+    background-color: #5918DF;
+}
+.third > .reveal::after {
+    background-color: #5918DF;
+}
+.fourth > .reveal::after {
+    background-color: white;
+}
+
+.scroll__box {
+    position: absolute;
+    left: -11px;
+    top: 75%;
+}
+.scroll__box > svg{
+    width: 20px;
+    display: block;
+    background-color: rgba(17,15,24,.7);
+}
+
+.scroll__box > p{
+    font-size: 20px;
+    color: #5918DF;
+    transform: rotate(-90deg);
+    padding-right: 45px;
+    margin-left: -45px;
+    margin-right: 0;
+    text-shadow: 0 3px 14px #181619, 0 -3px 14px #181619, 3px 0 14px #181619, -3px 0 14px #181619, 0 3px 6px #181619, 0 -3px 6px #181619, 3px 0 6px #181619, -3px 0 6px #181619;
+}
+
+.reveal,
+.reveal::after {
+	        animation-delay: 0;
+	        animation-delay: var(--animation-delay, 2s);
+	        animation-iteration-count: 1;
+	        animation-iteration-count: var(--iterations, 1);
+	        animation-duration: 800ms;
+	        animation-duration: var(--duration, 800ms);
+	        animation-fill-mode: both;
+	        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+ 
+.reveal {
+	position: relative;
+	animation-name: text;
+	white-space: nowrap;
+    animation-delay: 0s;
+}
+ 
+.reveal::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	    transform: scaleX(0);
+	    transform-origin: 0 50%;
+		pointer-events: none;
+        animation-name: revealer;
+        animation-delay: 0s;
+	}
+ 
+ 
+ 
+@keyframes text {
+	from {
+	        clip-path: inset(0 100% 0 0);
+	}
+	to {
+	        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes revealer {
+	
+	0%, 50% {
+	        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+	        transform-origin: 100% 50%;		
+	}
+ 
+	
+	60% {
+	        transform: scaleX(1);
+	}
+	
+	100% {
+	        transform: scaleX(0);
+	}
+}
+
+.hidden {
+    visibility: hidden;
+}
+

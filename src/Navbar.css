@@ -1,0 +1,32 @@
+.Navbar {
+    display: flex;
+    background: none;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 50px;
+}
+.Navbar__left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.Navbar__right {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.Navbar__right > a {
+    font-family: Roboto Condensed,Lato,Arial,sans-serif!important;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    padding: 15px;
+}
+
+.Navbar__right > a > span {
+    padding-left: 4px;
+    color: #494949;
+}
